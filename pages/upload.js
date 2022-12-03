@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 //icon
 import {FiSearch} from 'react-icons/fi'
 
-export default function upload() {
+export default function Upload() {
     const Uploader = [
         {
           id: "1",
@@ -24,43 +24,51 @@ export default function upload() {
       ];
 
   return (
-    <Layout>
+    <Layout title='Upload'>
         <h1 className="text-xl font-semibold text-slate-500 mb-8">
           Upload
         </h1>
 
-        <div className='flex justify-between mb-9'>
-            <div>
-              <form>
-                <div className='flex space-x-3'>
-                  <input type='date' className='h-10 border-slate-200 border rounded-md focus:outline-none focus:border-sky-500 py-2 px-4' />
-                  <select name="" id="" className='h-10 border-slate-200 border rounded-md focus:outline-none focus:border-sky-500 py-2 px-4'>
-                    <option value="">Radar Bogor</option>
-                    <option value="">Radar Cianjur</option>
-                    <option value="">Radar Depok</option>
-                    <option value="">Radar Sukabumi</option>
-                  </select>
-                    <input type="file" className="block text-slate-500 border border-slate-200 bg-white rounded-md
-                    file:mr-4 file:py-2 file:px-4 file:cursor-pointer file:rounded-l-md file:border-0 file:text-sm file:font-semibold file:h-full file:bg-slate-800 file:text-white hover:file:bg-slate-700
-                    "/>
-                    <input type='text' className='h-10 border-slate-200 border rounded-md focus:outline-none focus:border-sky-500 py-2 px-4' />
-                  <button className="h-10 px-6 text-sm font-semibold rounded bg-green-600 text-white hover:bg-green-500 transition" type="submit">
-                    Submit
-                  </button>
-                </div>
-              </form>
+        <div className='mb-10 bg-white p-3 rounded-md shadow-md shadow-slate-200/40'>
+        <h2 className='text-md text-slate-500 mb-1'>Input File</h2>
+        <hr className='mb-6'/>
+          <div className='grid grid-cols-3 gap-3 mb-6'>
+            <input type='date' className='h-10 border-slate-200 border rounded-md focus:outline-none focus:border-sky-500 py-2 px-4' />
+            <select name="" id="" className='h-10 border-slate-200 border rounded-md focus:outline-none focus:border-sky-500 py-2 px-4'>
+              <option value="">Radar Bogor</option>
+              <option value="">Radar Cianjur</option>
+              <option value="">Radar Depok</option>
+              <option value="">Radar Sukabumi</option>
+            </select>
+            <text type='text' className='h-10 border-slate-200 border rounded-md focus:outline-none focus:border-sky-500 py-2 px-4' placeholder='Creators...'/>
+            <div className='col-span-2'>
+            <input type="file" className="block w-full text-slate-500 border border-slate-200 bg-white rounded-md
+            file:mr-4 file:py-2 file:px-4 file:cursor-pointer file:rounded-l-md file:border-0 file:text-sm file:font-semibold file:h-full file:bg-slate-800 file:text-white hover:file:bg-slate-700
+            "/>
             </div>
+            <button className="px-6 text-sm font-semibold rounded bg-green-600 text-white hover:bg-green-500 transition" type="submit">
+              Submit
+            </button>
           </div>
+          <hr className='mb-3'/>
+          <div className='flex justify-end'>
+          <button className="h-10 px-6 text-sm font-semibold rounded bg-green-600 text-white hover:bg-green-500 transition" type="submit">
+              Submit
+            </button>
+          </div>
+        </div>
 
-            <form className='mb-3'>
-                <div className='relative'>
-                    <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
-                    <FiSearch />
-                    </div> 
-                <input type='text' className='p-4 h-10 pl-10 pr-20 border-slate-200 border rounded focus:outline-none focus:border-sky-500 placeholder-slate-400 py-2' placeholder='Search...' />
-                <button className='text-sm absolute inset-y-0 left-64 px-3 rounded-r bg-slate-800 hover:bg-slate-700 text-white font-semibold'>Search</button>
-                </div>
-            </form>
+        <div className='flex items-center justify-between mb-3'>
+          <h2 className='text-md text-slate-500'>Data Upload</h2>
+          <form>
+              <div className='relative'>
+                  <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+                  <FiSearch />
+                  </div> 
+              <input type='text' className='p-4 h-10 pl-10 pr-20 border-slate-200 border rounded focus:outline-none focus:border-sky-500 placeholder-slate-400 py-2' placeholder='Search...' />
+              </div>
+          </form>
+        </div>
 
         <div className=''>
             <table className="overflow-x-auto w-full text-left text-base">

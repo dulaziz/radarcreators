@@ -5,7 +5,7 @@ import Link from 'next/link'
 import {AiFillDashboard, AiOutlineCloudUpload, AiOutlineDoubleLeft} from 'react-icons/ai'
 import {FaFilm} from 'react-icons/fa'
 
-export default function sidebar () {
+export default function Sidebar () {
   const [open, setOpen] = useState(true);
 
   const Menus = [
